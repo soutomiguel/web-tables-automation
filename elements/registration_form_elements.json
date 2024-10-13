@@ -1,0 +1,13 @@
+{
+  "inputs": {
+    "firstName": "firstName",
+    "lastName": "lastName",
+    "email": "userEmail",
+    "age": "age",
+    "salary": "salary",
+    "departament": "department"
+  },
+  "buttons": {
+    "submit": "submit"
+  }
+}
