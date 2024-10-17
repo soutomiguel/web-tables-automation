@@ -11,8 +11,8 @@
     "firstName": "first name",
     "lastName": "last name",
     "email": "email@email",
-    "age": "age",
-    "salary": "1111",
+    "age": 1,
+    "salary": 1111,
     "department": "Montevideo"
   },
   "incorrect_age_format": {
@@ -20,7 +20,7 @@
     "lastName": "last name",
     "email": "email@email.com",
     "age": "age",
-    "salary": "1111",
+    "salary": 1111,
     "department": "Montevideo"
   },
   "incorrect_salary_format": {

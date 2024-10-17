@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from utils.read_json import read_json_file
 
 @dataclass
@@ -37,7 +37,12 @@ class IncorrectSalaryFormat:
     salary: str = None
     department: str = None
 
-def load_correct_register_form_inputs(json_file):
+def load_correct_register_form(json_file):
     data = read_json_file('data', json_file)
     correct_inputs = CorrectInputs(**data['correct'])
     return correct_inputs
+
+def load_incorrect_email_format(json_file):
+    data = read_json_file('data', json_file)
+    incorrect_email_format = IncorrectEmailFormat(**data['incorrect_email_format'])
+    return incorrect_email_format
