@@ -4,8 +4,6 @@ from utils.temp_data import temp_data
 from utils.json_pointers import pointer_registration_incorrect_email_format
 
 class TestRegistrationForm:
-    data_driven_TC002 = pointer_registration_incorrect_email_format()
-
     def test_TC001_submit_form_with_valid_info(self, driver):
         registration_page = RegistrationPage(driver)
         registration_page.add()
@@ -19,7 +17,6 @@ class TestRegistrationForm:
         time.sleep(2)
 
     def test_TC002_submit_without_data_populated(self, driver):
-        registration_page = RegistrationPage(driver)
         pass
 
     def test_TC003_submit_form_with_incorrect_format_email(self, driver):

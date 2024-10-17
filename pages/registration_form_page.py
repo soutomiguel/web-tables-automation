@@ -1,15 +1,18 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 from utils import json_pointers
-from utils.json_pointers import pointer_registration_form
-
+from utils.json_pointers import (
+    pointer_registration_form,
+    pointer_registration_incorrect_email_format
+)
 
 class RegistrationPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self.base_page = BasePage
 
-    data_driven = pointer_registration_form()
+    data_driven_TC001 = pointer_registration_form()
+    data_driven_TC002 = pointer_registration_incorrect_email_format()
     dashboard = json_pointers.pointer_dashboard_elements()
     registration = json_pointers.pointer_registration_form_elements()
 
@@ -26,22 +29,22 @@ class RegistrationPage(BasePage):
         self.base_page.click(self, self.ADD_BTN)
 
     def fill_first_name(self):
-        self.base_page.fill(self, self.FIRST_NAME, self.data_driven.firstName)
+        self.base_page.fill(self, self.FIRST_NAME, self.data_driven_TC001.firstName)
 
     def fill_last_name(self):
-        self.base_page.fill(self, self.LAST_NAME, self.data_driven.lastName)
+        self.base_page.fill(self, self.LAST_NAME, self.data_driven_TC001.lastName)
 
     def fill_email(self):
-        self.base_page.fill(self, self.LAST_NAME, self.data_driven.email)
+        self.base_page.fill(self, self.EMAIL, self.data_driven_TC001.email)
 
     def fill_age(self):
-        self.base_page.fill(self, self.LAST_NAME, self.data_driven.age)
+        self.base_page.fill(self, self.AGE, self.data_driven_TC001.age)
 
     def fill_salary(self):
-        self.base_page.fill(self, self.LAST_NAME, self.data_driven.salary)
+        self.base_page.fill(self, self.SALARY, self.data_driven_TC001.salary)
 
     def fill_department(self):
-        self.base_page.fill(self, self.LAST_NAME, self.data_driven.department)
+        self.base_page.fill(self, self.DEPARTMENT, self.data_driven_TC001.department)
 
     def submit(self):
         self.click(self.SUBMIT_BTN)
