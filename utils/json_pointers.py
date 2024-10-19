@@ -17,5 +17,6 @@ def pointer_registration_form_elements():
 def pointer_registration_form():
     return load_correct_register_form('register_data')
 
-def pointer_registration_incorrect_email_format():
+def pointer_registration_incorrect_format():
     return load_incorrect_email_format('register_data')
+

@@ -7,28 +7,9 @@
     "salary": 1111,
     "department": "Montevideo"
   },
-  "incorrect_email_format": {
-    "firstName": "first name",
-    "lastName": "last name",
+  "incorrect_format": {
     "email": "email@email",
-    "age": 1,
-    "salary": 1111,
-    "department": "Montevideo"
-  },
-  "incorrect_age_format": {
-    "firstName": "first name",
-    "lastName": "last name",
-    "email": "email@email.com",
     "age": "age",
-    "salary": 1111,
-    "department": "Montevideo"
-  },
-  "incorrect_salary_format": {
-    "firstName": "first name",
-    "lastName": "last name",
-    "email": "email@email.com",
-    "age": 1,
-    "salary": "salary",
-    "department": "Montevideo"
+    "salary": "salary"
   }
 }

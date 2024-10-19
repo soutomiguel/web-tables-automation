@@ -11,31 +11,10 @@ class CorrectInputs:
     department: str = None
 
 @dataclass
-class IncorrectEmailFormat:
-    firstName: str = None
-    lastName: str = None
+class IncorrectFormat:
     email: str = None
     age: str = None
     salary: str = None
-    department: str = None
-
-@dataclass
-class IncorrectAgeFormat:
-    firstName: str = None
-    lastName: str = None
-    email: str = None
-    age: str = None
-    salary: str = None
-    department: str = None
-
-@dataclass
-class IncorrectSalaryFormat:
-    firstName: str = None
-    lastName: str = None
-    email: str = None
-    age: str = None
-    salary: str = None
-    department: str = None
 
 def load_correct_register_form(json_file):
     data = read_json_file('data', json_file)
@@ -44,5 +23,5 @@ def load_correct_register_form(json_file):
 
 def load_incorrect_email_format(json_file):
     data = read_json_file('data', json_file)
-    incorrect_email_format = IncorrectEmailFormat(**data['incorrect_email_format'])
+    incorrect_email_format = IncorrectFormat(**data['incorrect_format'])
     return incorrect_email_format
