@@ -22,6 +22,7 @@ class RegistrationPage(BasePage):
     SALARY = (By.ID, registration.inputs.salary)
     DEPARTMENT = (By.ID, registration.inputs.departament)
     SUBMIT_BTN = (By.ID, registration.buttons.submit)
+    CLOSE_POP_UP = (By.XPATH, registration.buttons.close)
 
     def fill_first_name(self):
         self.base_page.fill(self, self.FIRST_NAME, self.data_driven_registration_correct_format.firstName)
@@ -52,3 +53,18 @@ class RegistrationPage(BasePage):
 
     def submit(self):
         self.click(self.SUBMIT_BTN)
+
+    def close_registration_form(self):
+        self.click(self.CLOSE_POP_UP)
+
+    def get_CSS_value(self, property_name):
+        element = self.base_page.get_element(self, self.FIRST_NAME)
+
+        try:
+            if element:
+                return element.value_of_css_property(property_name)
+            else:
+                print("Element not found")
+        except Exception as err:
+            print(err)
+        return None

@@ -3,7 +3,8 @@ from utils.get_web_elements import (
     load_register_form_elements
 )
 from utils.data_driven import (
-    load_correct_register_form, load_incorrect_email_format
+    load_correct_register_form,
+    load_incorrect_email_format
 )
 
 # JSON pointers

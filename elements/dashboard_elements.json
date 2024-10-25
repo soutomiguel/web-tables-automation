@@ -1,5 +1,23 @@
 {
+  "table": {
+    "table_data": "//div[@class='rt-tbody']"
+  },
+  "inputs": "searchBox",
   "buttons": {
-    "add": "addNewRecordButton"
+    "add": "addNewRecordButton",
+    "edit_record_1": "//div[@class='action-buttons']/span[@id='edit-record-1']",
+    "edit_record_2": "//div[@class='action-buttons']/span[@id='edit-record-2']",
+    "edit_record_3": "//div[@class='action-buttons']/span[@id='edit-record-3']",
+    "delete_1": "//div[@class='action-buttons']/span[@id='delete-record-1']",
+    "delete_2": "//div[@class='action-buttons']/span[@id='delete-record-2']",
+    "delete_3": "//div[@class='action-buttons']/span[@id='delete-record-3']"
+  },
+  "values": {
+    "first_name": "//div[@class='rt-tbody']/div[1]/div/div[1]",
+    "last_name": "//div[@class='rt-tbody']/div[1]/div/div[2]",
+    "email": "//div[@class='rt-tbody']/div[1]/div/div[3]",
+    "age": "//div[@class='rt-tbody']/div[1]/div/div[4]",
+    "salary": "//div[@class='rt-tbody']/div[1]/div/div[5]",
+    "department": "//div[@class='rt-tbody']/div[1]/div/div[6]"
   }
 }
