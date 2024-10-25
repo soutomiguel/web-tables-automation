@@ -11,18 +11,26 @@ class BasePage:
         try:
             return WebDriverWait(self.driver, self.timeout)\
                 .until(EC.element_to_be_clickable(element))
-        except TimeoutException:
-            print('Element not found')
+        except TimeoutException as err:
+            print("Element not found", err)
+
+
 
     def click(self, element):
         element_to_be_clicked = self.get_element(element)
         if element_to_be_clicked:
             element_to_be_clicked.click()
         else:
-            print('Element could not be clicked')
+            print("Element couldn't be clicked")
 
-    def get_text(self, element):
-        return self.get_element(element).text
+    try:
+        def get_text(self, element):
+            return self.get_element(element).text
+    except TimeoutException as err:
+        print("Text couldn't be retrieved", err)
 
-    def fill(self, element, value):
-        self.get_element(element).send_keys(value)
+    try:
+        def fill(self, element, value):
+            self.get_element(element).send_keys(value)
+    except TimeoutException as err:
+        print("Element couldn't be retrieved", err)

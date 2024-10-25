@@ -8,6 +8,10 @@
     "departament": "department"
   },
   "buttons": {
-    "submit": "submit"
+    "submit": "submit",
+    "close": "//button[@class='close']/span[1]"
+  },
+  "rgb": {
+    "error": "rgb(220, 53, 69)"
   }
 }
